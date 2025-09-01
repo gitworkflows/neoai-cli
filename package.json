@@ -1,0 +1,172 @@
+{
+  "name": "neoai",
+  "version": "0.0.1",
+  "private": false,
+  "description": "The core Neoai plugin contains the core functionality of Neoai like the project graph, neoai commands and task orchestration.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft-bot/neoai.git",
+    "directory": "packages/neoai"
+  },
+  "scripts": {
+    "postinstall": "node ./bin/post-install || exit 0"
+  },
+  "keywords": [
+    "Monorepo",
+    "Angular",
+    "React",
+    "Web",
+    "Node",
+    "Nest",
+    "Jest",
+    "Cypress",
+    "CLI",
+    "Testing",
+    "Front-end",
+    "Backend",
+    "Mobile"
+  ],
+  "bin": {
+    "neoai": "./bin/neoai.js",
+    "neoai-cloud": "./bin/neoai-cloud.js"
+  },
+  "author": "Victor Savkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khulnasoft-bot/neoai/issues"
+  },
+  "homepage": "https://neoai.dev",
+  "dependencies": {
+    "@napi-rs/wasm-runtime": "0.2.4",
+    "@yarnpkg/lockfile": "^1.1.0",
+    "@yarnpkg/parsers": "3.0.2",
+    "@zkochan/js-yaml": "0.0.7",
+    "axios": "^1.8.3",
+    "chalk": "^4.1.0",
+    "cli-cursor": "3.1.0",
+    "cli-spinners": "2.6.1",
+    "cliui": "^8.0.1",
+    "dotenv": "~16.4.5",
+    "dotenv-expand": "~11.0.6",
+    "enquirer": "~2.3.6",
+    "figures": "3.2.0",
+    "flat": "^5.0.2",
+    "front-matter": "^4.0.2",
+    "ignore": "^5.0.4",
+    "jest-diff": "^30.0.2",
+    "jsonc-parser": "3.2.0",
+    "lines-and-columns": "2.0.3",
+    "minimatch": "9.0.3",
+    "node-machine-id": "1.1.12",
+    "npm-run-path": "^4.0.1",
+    "open": "^8.4.0",
+    "ora": "5.3.0",
+    "resolve.exports": "2.0.3",
+    "semver": "^7.5.3",
+    "string-width": "^4.2.3",
+    "tar-stream": "~2.2.0",
+    "tmp": "~0.2.1",
+    "tree-kill": "^1.2.2",
+    "tsconfig-paths": "^4.1.2",
+    "tslib": "^2.3.0",
+    "yaml": "^2.6.0",
+    "yargs": "^17.6.2",
+    "yargs-parser": "21.1.1"
+  },
+  "peerDependencies": {
+    "@swc-node/register": "^1.8.0",
+    "@swc/core": "^1.3.85"
+  },
+  "peerDependenciesMeta": {
+    "@swc-node/register": {
+      "optional": true
+    },
+    "@swc/core": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "@neoai/neoai-darwin-arm64": "*",
+    "@neoai/neoai-darwin-x64": "*",
+    "@neoai/neoai-freebsd-x64": "*",
+    "@neoai/neoai-linux-arm-gnueabihf": "*",
+    "@neoai/neoai-linux-arm64-gnu": "*",
+    "@neoai/neoai-linux-arm64-musl": "*",
+    "@neoai/neoai-linux-x64-gnu": "*",
+    "@neoai/neoai-linux-x64-musl": "*",
+    "@neoai/neoai-win32-arm64-msvc": "*",
+    "@neoai/neoai-win32-x64-msvc": "*"
+  },
+  "neoai-migrations": {
+    "migrations": "./migrations.json",
+    "packageGroup": [
+      "@neoai/js",
+      "@neoai/jest",
+      "@neoai/linter",
+      "@neoai/eslint",
+      "@neoai/workspace",
+      "@neoai/angular",
+      "@neoai/cypress",
+      "@neoai/detox",
+      "@neoai/devkit",
+      "@neoai/esbuild",
+      "@neoai/eslint-plugin",
+      "@neoai/expo",
+      "@neoai/express",
+      "@neoai/gradle",
+      "@neoai/module-federation",
+      "@neoai/nest",
+      "@neoai/next",
+      "@neoai/node",
+      "@neoai/nuxt",
+      "@neoai/playwright",
+      "@neoai/plugin",
+      "@neoai/react",
+      "@neoai/react-native",
+      "@neoai/rollup",
+      "@neoai/remix",
+      "@neoai/rspack",
+      "@neoai/rsbuild",
+      "@neoai/storybook",
+      "@neoai/vite",
+      "@neoai/vue",
+      "@neoai/web",
+      "@neoai/webpack",
+      "@neoai/docker",
+      {
+        "package": "neoai-cloud",
+        "version": "latest"
+      },
+      {
+        "package": "@khulnasoft-bot/neoai-cloud",
+        "version": "latest"
+      }
+    ]
+  },
+  "generators": "./generators.json",
+  "executors": "./executors.json",
+  "builders": "./executors.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "napi": {
+    "binaryName": "neoai",
+    "packageName": "@neoai/neoai",
+    "wasm": {
+      "initialMemory": 1024,
+      "maximumMemory": 32768
+    },
+    "targets": [
+      "x86_64-unknown-linux-gnu",
+      "x86_64-pc-windows-msvc",
+      "x86_64-apple-darwin",
+      "aarch64-apple-darwin",
+      "aarch64-unknown-linux-gnu",
+      "aarch64-unknown-linux-musl",
+      "aarch64-pc-windows-msvc",
+      "armv7-unknown-linux-gnueabihf",
+      "x86_64-unknown-linux-musl",
+      "x86_64-unknown-freebsd"
+    ]
+  }
+}

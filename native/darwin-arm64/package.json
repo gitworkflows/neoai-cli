@@ -1,0 +1,23 @@
+{
+  "name": "@neoai/neoai-darwin-arm64",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft-bot/neoai.git",
+    "directory": "native/darwin-arm64"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "neoai.darwin-arm64.node",
+  "files": [
+    "neoai.darwin-arm64.node"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
